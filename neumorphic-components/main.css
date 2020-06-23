@@ -10,13 +10,137 @@ body {
   font-family: 'Jost', sans-serif;
   background-color: #f2f2fb;
   color: #343f68;
-  height: 100vw;
+  min-height: 100vh;
+  display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .container {
-  width: 700px;
+  width: 500px;
   max-width: calc(100% - 20px);
   padding: 10px;
+}
+
+.cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #f2f2fb;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.neo {
+  box-shadow: 5px 5px 10px #c6c6ce, 
+              -5px -5px 10px #ffffff;
+}
+
+.card {
+  text-align: center;
+  margin: 10px;
+  width: 140px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.card:hover,
+.card-active {
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px #c6c6ce, 
+              -5px -5px 10px #ffffff;
+}
+
+.card-icon {
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.icon-red {
+  background-color: #FC7474;
+}
+
+.icon-orange {
+  background-color: #FCAB74;
+}
+
+.icon-blue {
+  background-color: #7E90F8;
+}
+
+.card-name {
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.neo-inner {
+  background-color: #E5E8F2;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+  margin: 50px 0;
+  padding: 20px 0;
+  box-shadow: 5px 5px 10px #c6c6ce inset, 
+              -5px -5px 10px #fbfbfd inset;
+}
+
+.neo-inner p {
+  width: 350px;
+  margin: 0 auto;
+  max-width: 100%;
+  font-weight: 600;
+}
+
+.action {
+  display: flex;
+}
+
+.btn {
+  margin: 20px;
+  flex: 1;
+  height: 50px;
+  border-radius: 50px;
+  border: none;
+  color: #7E90F8;
+  background-color: #f2f2fb;
+  font-weight: 600;
+  box-shadow: 5px 5px 10px #c6c6ce, 
+              -5px -5px 10px #ffffff;
+  outline: none;
+}
+
+.btn:active {
+  box-shadow: 3px 3px 10px #c6c6ce, 
+              -3px -3px 10px #ffffff;
+}
+
+.btn-blue {
+  background-color: #7E90F8;
+  color: #fff;
+  box-shadow: 5px 5px 10px #6776cb, 
+  -5px -5px 10px #f2f2fb;
+}
+
+@media (max-width: 500px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .action {
+    display: block;
+  }
+
+  .btn {
+    display: block;
+    width: calc(100% - 30px);
+    margin: 30px auto;
+  }
 }
