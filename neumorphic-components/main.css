@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -14,6 +14,11 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+a {
+  text-decoration: none;
+  color: #7E90F8;
 }
 
 .container {
@@ -78,7 +83,7 @@ body {
 .card-name {
   text-transform: uppercase;
   font-size: 0.8rem;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 .neo-inner {
@@ -96,7 +101,7 @@ body {
   width: 350px;
   margin: 0 auto;
   max-width: 100%;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .action {
@@ -111,7 +116,7 @@ body {
   border: none;
   color: #7E90F8;
   background-color: #f2f2fb;
-  font-weight: 600;
+  font-weight: 500;
   box-shadow: 5px 5px 10px #c6c6ce, 
               -5px -5px 10px #ffffff;
   outline: none;
