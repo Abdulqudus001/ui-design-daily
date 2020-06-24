@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Jost', sans-serif;
+  background-color: #151D2D;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 500px;
+  max-width: calc(100% - 20px);
+  padding: 30px;
+}
+
+.card {
+  background-color: #263044;
+  box-shadow: 2px 4px 20px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  min-height: 180px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.user {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-image: url('./images/user.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 10px solid #192235;
+  flex-shrink: 0;
+}
+
+.post {
+  flex-grow: 1;
+  margin-left: 20px;
+}
+
+.post-field {
+  border-bottom: 2px solid #192235;
+  flex-grow: 1;
+  max-width: 100%;
+  outline: none;
+  color: #abb8d4;
+  height: 100px;
+  font-size: 1.1rem;
+}
+
+.post-field:empty::before {
+  content: attr(placeholder);
+  font-weight: 500;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.fa, .far {
+  margin-right: 30px;
+  color: rgba(171, 184, 212, 0.6);
+}
+
+button {
+  background-color: #51A1E4;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 50px;
+  width: 90px;
+  height: 35px;
+  max-width: 100%;
+  border: none;
+}
+
+@media (max-width: 500px) {
+  .fa, .far {
+    margin-right: 10px;
+  }
+}
