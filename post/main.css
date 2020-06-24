@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&display=swap');
 
 * {
   box-sizing: border-box;
@@ -7,7 +7,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Jost', sans-serif;
+  font-family: 'Heebo', sans-serif;
   background-color: #151D2D;
   color: #fff;
   min-height: 100vh;
@@ -77,12 +77,13 @@ body {
 button {
   background-color: #51A1E4;
   color: #fff;
-  font-weight: bold;
+  font-weight: 500;
   border-radius: 50px;
   width: 90px;
   height: 35px;
   max-width: 100%;
   border: none;
+  font-size: 1rem;
 }
 
 @media (max-width: 500px) {
