@@ -49,6 +49,7 @@ body {
 }
 
 .post-field {
+  margin-top: 10px;
   border-bottom: 2px solid #192235;
   flex-grow: 1;
   max-width: 100%;
