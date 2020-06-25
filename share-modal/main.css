@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@400;500&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Heebo', sans-serif;
+  background-color: #151D2D;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  width: 500px;
+  max-width: calc(100% - 20px);
+  padding: 30px;
+}
