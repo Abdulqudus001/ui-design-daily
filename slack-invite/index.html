@@ -10,8 +10,11 @@
 </head>
 <body>
   <nav class="nav">
-    <div class="container navbar">
+    <div class="sidebar">
       <img src="./images/logo.svg" alt="UI design daily logo">
+      <button class="close" onclick="closeNav()">
+        <i class="fa fa-times"></i>
+      </button>
       <ul>
         <li>
           <a href="#">Designs</a>
@@ -29,12 +32,44 @@
           <a href="#">Contact</a>
         </li>
       </ul>
-      <button class="menu">
+      <hr>
+      <p class="copyright">
+        &copy;UIDesignDaily
+        <script>document.write(new Date().getFullYear())</script>
+      </p>
+      <div class="icons">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-behance"></i>
+        <i class="fab fa-dribbble"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook-f"></i>
+      </div>
+    </div>
+    <div class="container navbar">
+      <img src="./images/logo.svg" alt="UI design daily logo">
+      <ul class="list">
+        <li>
+          <a href="#">Designs</a>
+        </li>
+        <li>
+          <a href="#">About</a>
+        </li>
+        <li>
+          <a href="#">License</a>
+        </li>
+        <li>
+          <a href="#">Blog</a>
+        </li>
+        <li>
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+      <button class="menu" onclick="toggleNav()">
         <i class="fa fa-bars"></i>
       </button>
     </div>
   </nav>
-  <div class="container">
+  <div class="invite">
     <img src="./images/slack-logo.svg" alt="Slack Logo">
     <h1>UI Design Daily Community</h1>
     <p>
@@ -45,5 +80,27 @@
       <button>Invite Me!</button>
     </form>
   </div>
+
+  <footer>
+    <div class="container footer">
+      <div>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Privacy Policy</a>
+      </div>
+      <p>
+        &copy;UIDesignDaily
+        <script>document.write(new Date().getFullYear())</script>
+      </p>
+      <div class="social">
+        <i class="fab fa-twitter"></i>
+        <i class="fab fa-behance"></i>
+        <i class="fab fa-dribbble"></i>
+        <i class="fab fa-instagram"></i>
+        <i class="fab fa-facebook-f"></i>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
 </body>
 </html>
