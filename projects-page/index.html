@@ -32,7 +32,7 @@
         </a>
       </li>
     </ul>
-    <button class="menu">
+    <button class="menu" onclick="showNav()">
       <i class="fa fa-bars"></i>
     </button>
     <div>
@@ -41,6 +41,9 @@
     </div>
   </nav>
   <div class="sidebar">
+    <button class="close" onclick="hideNav()">
+      <i class="fa fa-times"></i>
+    </button>
     <div>
       <h4>Projects</h4>
       <ul>
@@ -136,5 +139,6 @@
       <i class="fa fa-question"></i>
     </div>
   </div>
+  <script src="./main.js"></script>
 </body>
 </html>

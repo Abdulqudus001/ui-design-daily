@@ -76,7 +76,7 @@ ul {
   margin: 0 10px;
 }
 
-.menu {
+.menu, .close {
   border: none;
   background-color: transparent;
   font-size: 1.5rem;
@@ -100,8 +100,14 @@ ul {
     display: none;
   }
 
-  .menu {
+  .menu, .close {
     display: block;
+  }
+
+  .close {
+    position: absolute;
+    right: 20px;
+    color: #fff;
   }
 }
 
@@ -125,6 +131,7 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: width 0.1s ease-out;
 }
 
 .sidebar h4 {
@@ -213,7 +220,24 @@ li .dot {
 
 @media only screen and (max-width: 600px) {
   .sidebar {
-    display: none;
+    width: 0;
+    padding: 0;
+    color: transparent;
+  }
+
+  .sidebar.visible {
+    color: #fff;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 300px;
+    max-width: calc(100% - 40px);
+    right: 20px;
+    z-index: 2;
+    padding: 20px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    transition: width 0.3s ease-out;
   }
 }
 
