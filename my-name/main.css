@@ -5,6 +5,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: black;
 }
 
 .container {
@@ -12,4 +13,61 @@ body {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
+}
+
+#name {
+  animation: fill .3s linear forwards 4.3s;
+}
+
+.path {
+  stroke-dasharray: 300;
+  stroke-dashoffset: 300;
+}
+
+.path:nth-child(1) {
+  animation: text 4s linear forwards;
+}
+
+.path:nth-child(2) {
+  animation: text 4s linear forwards .3s;
+}
+.path:nth-child(3) {
+  animation: text 4s linear forwards .6s;
+}
+.path:nth-child(4) {
+  animation: text 4s linear forwards .9s;
+}
+.path:nth-child(5) {
+  animation: text 4s linear forwards 1.2s;
+}
+.path:nth-child(6) {
+  animation: text 4s linear forwards 1.5s;
+}
+.path:nth-child(7) {
+  animation: text 4s linear forwards 1.8s;
+}
+.path:nth-child(8) {
+  animation: text 4s linear forwards 2.1s;
+}
+.path:nth-child(9) {
+  animation: text 4s linear forwards 2.4s;
+}
+.path:nth-child(10) {
+  animation: text 4s linear forwards 2.7s;
+}
+
+@keyframes text {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill {
+  from {
+    fill: transparent;
+  }
+
+  to {
+    fill: red;
+  }
 }
