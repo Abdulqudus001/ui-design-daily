@@ -50,6 +50,12 @@ body {
   position: relative;
 }
 
+.face {
+  --rotate-face: 0deg;
+  transform: rotate(var(--rotate-face));
+  transition: transform .3s ease-in;
+}
+
 .eyes {
   display: flex;
   width: 150px;
