@@ -1,3 +1,7 @@
+html {
+  overflow: hidden;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -188,10 +192,11 @@ body {
 .finger2 {
   left: -1.5px;
   height: 30px;
+  z-index: 1;
 }
 
 .finger3 {
-  left: -3px;
+  left: -3.5px;
   top: 3px;
   height: 20px;
 }
@@ -207,6 +212,7 @@ form {
 
 label {
   position: relative;
+  width: 280px;
 }
 
 label .fa {
@@ -222,9 +228,22 @@ input {
   max-width: 100%;
   border-radius: 50px;
   padding: 10px 50px;
-  margin: 0 0 20px;
+  margin: 0 0 10px;
   border: none;
   display: block;
+  outline: none;
+}
+
+.show-pass {
+  color: rgba(36, 57, 70, 0.5);
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  left: 240px;
+  border: none;
+  font-size: 1.2rem;
+  top: 6px;
 }
 
 button[type="submit"] {
@@ -234,4 +253,5 @@ button[type="submit"] {
   background-color: #243946;
   color: #fff;
   border: none;
+  margin: 10px 0;
 }
