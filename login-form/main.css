@@ -17,10 +17,33 @@ body {
   min-height: 500px;
   max-width: calc(100% - 20px);
   padding: 0 10px;
+  position: relative;
+  z-index: 1;
 }
 
-.face {
+.ear-left,
+.ear-right {
+  width: 80px;
+  height: 80px;
+  background-color: #243946;
+  border-radius: 50%;
+  position: absolute;
+  top: -40px;
+}
+
+.ear-left {
+  left: -40px;
+}
+
+.ear-right {
+  right: -40px;
+}
+
+.dog {
   width: 200px;
+  margin: 0 auto;
+  margin-top: 50px;
+  position: relative;
 }
 
 .eyes {
@@ -34,7 +57,7 @@ body {
 .eye-left, .eye-right {
   width: 30px;
   height: 30px;
-  background-color: black;
+  background-color: #243946;
   border-radius: 50%;
   position: relative;
 }
@@ -50,4 +73,121 @@ body {
   position: absolute;
   transform: rotate(40deg) translate(0, 3px);
   background-color: white;
+}
+
+.nose {
+  position: relative;
+  text-align: center;
+  width: 38px;
+  height: 22px;
+	margin: 20px auto;
+}
+
+#nose {
+  position: relative;
+}
+
+.nose::before {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 17px;
+  height: 10px;
+  left: calc(50% - 8.5px);
+  top: 2px;
+  border-radius: 100px / 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  z-index: 1;
+}
+
+.mouth {
+  position: relative;
+}
+
+.lips1 {
+  width: 80px;
+  position: absolute;
+  left: calc(50% - 40px);
+  height: 20px;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-bottom: 3px solid #243946;
+  border-right: 3px solid #243946;
+  border-left: 3px solid #243946;
+  z-index: 1;
+  background-color: orange;
+}
+
+.lips2 {
+  position: absolute;
+  bottom: -30px;
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 30px;
+  border-radius: 100px/50px;
+  background-color: #243946;
+}
+
+.tongue {
+  width: 30px;
+  height: 50px;
+  background-color: #FCB9C1;
+  position: absolute;
+  left: calc(50% - 15px);
+  border-radius: 0 0 20px 20px;
+}
+
+.tongue::before {
+  content: '';
+  height: 5px;
+  width: 100%;
+  display: block;
+  position: absolute;
+  top: 20px;
+  background-color: #f1818f;
+}
+
+.tongue::after {
+  content: '';
+  width: 4px;
+  height: 80%;
+  left: calc(50% - 2px);
+  background-color: #f1818f;
+  display: block;
+  position: absolute;
+}
+
+.hands {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 150px;
+}
+
+.hand {
+  display: flex;
+}
+
+.finger {
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: 1.5px solid #243946;
+  border-top: none;
+  width: 15px;
+  position: relative;
+}
+
+.finger1 {
+  height: 25px;
+}
+
+.finger2 {
+  left: -1.5px;
+  height: 35px;
+}
+
+.finger3 {
+  left: -3px;
+  height: 25px;
 }
