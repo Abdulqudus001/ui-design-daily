@@ -167,6 +167,7 @@ body {
 
 .hand {
   display: flex;
+  z-index: 1;
 }
 
 .finger {
@@ -176,18 +177,61 @@ body {
   border-top: none;
   width: 15px;
   position: relative;
+  background-color: orange;
 }
 
 .finger1 {
-  height: 25px;
+  height: 20px;
+  top: 5px;
 }
 
 .finger2 {
   left: -1.5px;
-  height: 35px;
+  height: 30px;
 }
 
 .finger3 {
   left: -3px;
-  height: 25px;
+  top: 3px;
+  height: 20px;
+}
+
+form {
+  position: absolute;
+  top: 220px;
+  width: 280px;
+  left: calc(50% - 140px);
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+label {
+  position: relative;
+}
+
+label .fa {
+  position: absolute;
+  z-index: 1;
+  top: 10px;
+  left: 20px;
+  color: rgba(36, 57, 70, 0.5);
+}
+
+input {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 50px;
+  padding: 10px 50px;
+  margin: 0 0 20px;
+  border: none;
+  display: block;
+}
+
+button[type="submit"] {
+  width: 100%;
+  height: 35px;
+  border-radius: 50px;
+  background-color: #243946;
+  color: #fff;
+  border: none;
 }
