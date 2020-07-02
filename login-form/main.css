@@ -295,3 +295,17 @@ button[type="submit"] {
   margin: 10px 0;
   outline: none;
 }
+
+.links {
+  position: absolute;
+  top: 400px;
+  width: 150px;
+  left: calc(50% - 75px);
+  display: flex;
+  justify-content: space-between;
+}
+
+.links a {
+  color: #243946;
+  font-size: 1.5rem;
+}
