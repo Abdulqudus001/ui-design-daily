@@ -65,8 +65,8 @@ body {
 }
 
 .eye-left, .eye-right {
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   background-color: #243946;
   border-radius: 50%;
   position: relative;
@@ -76,8 +76,8 @@ body {
 .eye-right::before {
   content: '';
   display: block;
-  width: 15px;
-  height: 10px;
+  width: 12px;
+  height: 8px;
   border-radius: 50%;
   right: 0;
   position: absolute;
@@ -140,20 +140,26 @@ body {
 
 .tongue {
   width: 30px;
-  height: 50px;
+  height: 60px;
   background-color: #FCB9C1;
   position: absolute;
   left: calc(50% - 15px);
   border-radius: 0 0 20px 20px;
+  animation: breathe .3s infinite linear;
+}
+
+.tongue.hold {
+  animation: none;
+  height: 40px;
 }
 
 .tongue::before {
   content: '';
-  height: 5px;
+  height: 10px;
   width: 100%;
   display: block;
   position: absolute;
-  top: 20px;
+  top: 13px;
   background-color: #f1818f;
 }
 
@@ -167,6 +173,15 @@ body {
   position: absolute;
 }
 
+@keyframes breathe {
+  from {
+    transform: rotateX(0);
+  }
+  to {
+    transform: rotateX(50deg);
+  }
+}
+
 .hands {
   width: 100%;
   display: flex;
@@ -178,6 +193,23 @@ body {
 .hand {
   display: flex;
   z-index: 1;
+  transition: transform .6s ease-in-out;
+}
+
+.cover.hand-right {
+  transform: translateY(-153px) translateX(-17px) rotate(130deg);
+}
+
+.cover.hand-left {
+  transform: translateY(-153px) translateX(17px) rotate(-130deg);
+}
+
+.peek.hand-right {
+  transform: translateY(-115px) translateX(-14px) rotate(130deg);
+}
+
+.peek.hand-left {
+  transform: translateY(-115px) translateX(14px) rotate(-130deg);
 }
 
 .finger {
@@ -260,4 +292,5 @@ button[type="submit"] {
   color: #fff;
   border: none;
   margin: 10px 0;
+  outline: none;
 }
