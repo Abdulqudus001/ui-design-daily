@@ -202,7 +202,7 @@ body {
 }
 
 .cover.hand-left {
-  transform: translateY(-153px) translateX(17px) rotate(-130deg);
+  transform: translateY(-155px) translateX(15px) rotate(-130deg);
 }
 
 .peek.hand-right {
