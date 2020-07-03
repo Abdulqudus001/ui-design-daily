@@ -1,3 +1,13 @@
+/* Keyframes */
+@keyframes rotateWheel {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -46,6 +56,7 @@ body {
   border: 10px solid black;
   position: absolute;
   bottom: 0;
+  animation: rotateWheel 1s infinite linear;
 }
 
 .wheel-left {
@@ -58,8 +69,8 @@ body {
 
 .wheel::after {
   content: '';
-  width: 170px;
-  height: 170px;
+  width: 167.5px;
+  height: 167.5px;
   border-radius: 50%;
   display: block;
   border: 6px solid #fff;
