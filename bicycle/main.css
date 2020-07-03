@@ -1,0 +1,112 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: orange;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.bicycle {
+  width: 500px;
+  max-width: 100%;
+  min-height: 400px;
+  position: relative;
+}
+
+.wheel {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 10px solid black;
+  position: absolute;
+  bottom: 0;
+}
+
+.wheel-left {
+  left: calc(-50% + 150px);
+}
+
+.wheel-right {
+  right: calc(-50% + 150px);
+}
+
+.wheel::after {
+  content: '';
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: block;
+  border: 6px solid #fff;
+  position: relative;
+}
+
+.wheel::before {
+  content: '';
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  top: calc(50% - 17.5px);
+  left: calc(50% - 17.5px);
+  background-color: #fff;
+  border: 5px solid black;
+  position: absolute;
+}
+
+.rim {
+  width: 2px;
+  height: 170px;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 6px;
+  left: calc(50% - 1px);
+  transform-origin: 50% 50%;
+}
+
+.rim2 {
+  transform: rotate(30deg);
+}
+
+.rim3 {
+  transform: rotate(60deg);
+}
+
+.rim4 {
+  transform: rotate(90deg);
+}
+
+.rim5 {
+  transform: rotate(120deg);
+}
+
+.rim6 {
+  transform: rotate(150deg);
+}
+
+.frame {
+  width: 500px;
+  height: 100px;
+  position: absolute;
+  bottom: 100px;
+  background-color: blue;
+}
+
+.fr {
+  position: absolute;
+  width: 15px;
+  background-color: red;
+  min-height: 150px;
+}
+
+.fr1 {
+  right: 0;
+  bottom: 0;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
