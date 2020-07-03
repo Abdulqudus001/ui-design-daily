@@ -14,9 +14,29 @@ body {
 
 .bicycle {
   width: 500px;
-  max-width: 100%;
+  /* max-width: 100%; */
   min-height: 400px;
-  position: relative;
+  position: absolute;
+  /* transform: scale(0.4); */
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 375px) {
+  .bicycle {
+    transform: scale(0.4);
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 602px) {
+  .bicycle {
+    transform: scale(0.5);
+  }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 720px) {
+  .bicycle {
+    transform: scale(0.8);
+  }
 }
 
 .wheel {
