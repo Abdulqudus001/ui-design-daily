@@ -795,6 +795,7 @@ body {
   animation: moveRoad 10s infinite linear;
   position: fixed;
   overflow-x: hidden;
+  bottom: 0;
   z-index: 1;
 }
 
