@@ -797,7 +797,7 @@ body {
   height: 125px;
   background-color: #333333;
   /* border-top: 10px dashed white; */
-  border-radius: 0px;
+  border-radius: 1px;
   overflow-x: hidden;
   bottom: 0;
   z-index: 1;
