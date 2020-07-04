@@ -865,7 +865,7 @@ body {
 .shadow {
   border-right: 60px solid #2c2525;
   border-left: 60px solid transparent;
-  border-bottom: 50px solid inherit;
+  border-bottom: 50px solid #333;
   width: 200px;
 }
 
