@@ -28,7 +28,8 @@ body {
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
-  min-height: var(--vh);
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   animation: dayLight 40s infinite linear;
 }
 
