@@ -529,3 +529,90 @@ body {
   border-radius: 20px;
   background-color: black;
 }
+
+.torso {
+  width: 70px;
+  height: 130px;
+  background-color: orange;
+  position: absolute;
+  bottom: 80px;
+  border-radius: 0 0 10px 10px;
+  left: 20px;
+  transform: rotate(30deg);
+  transform-origin: 0% 100%;
+  z-index: 1;
+}
+
+.torso::before {
+  content: '';
+  width: 10px;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  border-bottom-left-radius: 10px;
+}
+
+.chest {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: orange;
+  position: absolute;
+  top: -50px;
+}
+
+.chest::before {
+  content: '';
+  width: 100%;
+  border-radius: 50%;
+  height: 100%;
+  border-left: 10px solid rgba(0, 0, 0, 0.1);
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.hand {
+  width: 20px;
+  height: 190px;
+  background-color: #a54d2a;
+  position: absolute;
+  left: 10px;
+  top: -150px;
+  transform: rotate(100deg);
+  transform-origin: 50% 100%;
+  border-radius: 50px 50px 0 0;
+}
+
+.hand-left {
+  z-index: -1;
+  transform: rotate(98deg);
+  top: -190px;
+  height: 210px;
+}
+
+.sleeve {
+  width: 40px;
+  height: 60px;
+  background-color: rgb(231, 156, 15);
+  border-radius: 0 0 50px 50px;
+  position: absolute;
+  bottom: -10px;
+  left: -50%;
+}
+
+.hand-left .sleeve {
+  height: 80px;
+}
+
+.neck {
+  width: 30px;
+  height: 60px;
+  background-color: #a54d2a;
+  position: absolute;
+  top: -95px;
+  left: calc(50% - 10px);
+  border-radius: 50px;
+}
