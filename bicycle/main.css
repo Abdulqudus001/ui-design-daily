@@ -853,14 +853,14 @@ body {
   display: flex;
   z-index: 1;
   position: fixed;
-  bottom: 250px;
+  bottom: 230px;
   animation: moveOffice 10s infinite linear;
 }
 
 .shadow {
   border-right: 60px solid #2c2525;
-  border-left: 15px solid transparent;
-  border-bottom: 15px solid #000;
+  border-left: 60px solid transparent;
+  border-bottom: 50px solid inherit;
   width: 200px;
 }
 
