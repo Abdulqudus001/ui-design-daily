@@ -776,12 +776,12 @@ body {
 .road-top {
   /* So the road will never run out of room */
   width: 500000px;
-  height: 125px;
+  height: 115px;
   background-color: #333333;
   border-bottom: 10px dashed white;
   animation: moveRoad 10s infinite linear;
   position: fixed;
-  bottom: 125px;
+  bottom: 115px;
   overflow-x: hidden;
   z-index: 1;
 }
@@ -789,7 +789,7 @@ body {
 .road-bottom {
   /* So the road will never run out of room */
   width: 500000px;
-  height: 125px;
+  height: 115px;
   background-color: #333333;
   border-top: 10px dashed white;
   animation: moveRoad 10s infinite linear;
