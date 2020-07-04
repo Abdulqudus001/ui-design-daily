@@ -11,7 +11,7 @@ html {
     background-color: #211919;
   }
 
-  40%, 50% {
+  40%, 60% {
     background-color: #9acaec;
   }
 }
@@ -807,16 +807,11 @@ body {
   }
 
   40% {
-    bottom: calc(100vh - 200px);
+    bottom: calc(100vh - 100px);
     left: 40%;
   }
 
   50% {
-    bottom: calc(100vh - 100px);
-    left: calc(50% - 50px);
-  }
-
-  60% {
     bottom: calc(100vh - 100px);
     left: 60%;
   }
@@ -836,7 +831,99 @@ body {
   position: fixed;
   bottom: 0;
   right: 0;
-  /* left: calc(50% - 50px); */
-  /* animation: moveSun 10s infinite linear; */
   animation: moveSun 40s infinite linear;
+}
+
+@keyframes moveOffice {
+  from {
+    transform: translateX(100%);
+  }
+
+  to {
+    transform: translateX(-100%);
+  }
+}
+
+.office {
+  display: flex;
+  z-index: 1;
+  position: fixed;
+  bottom: 250px;
+  animation: moveOffice 10s infinite linear;
+}
+
+.shadow {
+  border-right: 60px solid #2c2525;
+  border-left: 15px solid transparent;
+  border-bottom: 15px solid #000;
+  width: 200px;
+}
+
+.office-main {
+  width: 250px;
+  height: 700px;
+  background-color: #211919;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+
+.office-main .left,
+.office-main .right {
+  position: absolute;
+  bottom: 10%;
+  margin: 10px;
+  height: 50%;
+  width: 40%;
+  border-left: 15px dashed white;
+  border-right: 15px dashed rgba(214, 156, 19, 0.7);
+}
+
+.office-main .right {
+  right: 0;
+}
+
+/* Extra small devices */
+@media only screen and (max-width: 375px) {
+  .office {
+    transform: scale(0.4);
+    bottom: 40px;
+  }
+  
+  .office-main .left,
+  .office-main .right {
+    bottom: 25%;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 602px) {
+  .office {
+    transform: scale(0.5);
+    bottom: 74px;
+  }
+
+  .office-main .left,
+  .office-main .right {
+    bottom: 25%;
+  }
+}
+
+@media only screen and (min-width: 603px) {
+  .office {
+    transform: scale(0.7);
+    bottom: 145px;
+  }
+
+  .office-main .left,
+  .office-main .right {
+    bottom: 15%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .office {
+    transform: scale(1);
+    bottom: 250px;
+  }
 }
