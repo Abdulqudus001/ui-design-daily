@@ -791,7 +791,7 @@ body {
   width: 500000px;
   height: 115px;
   background-color: #333333;
-  border-top: 10px dashed white;
+  border-top: 10px solid white;
   animation: moveRoad 10s infinite linear;
   position: fixed;
   overflow-x: hidden;
