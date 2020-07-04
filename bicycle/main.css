@@ -784,7 +784,7 @@ body {
   /* So the road will never run out of room */
   height: 125px;
   background-color: #333333;
-  border-bottom: 10px solid white;
+  border-bottom: 10px dashed white;
   bottom: 125px;
   overflow-x: hidden;
   z-index: 1;
@@ -795,7 +795,7 @@ body {
   /* width: 500000px; */
   height: 125px;
   background-color: #333333;
-  border-top: 10px solid white;
+  border-top: 10px dashed white;
   overflow-x: hidden;
   bottom: 0;
   z-index: 1;
