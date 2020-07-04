@@ -773,14 +773,18 @@ body {
   }
 }
 
+.road {
+  width: 500000px;
+  height: 250px;
+  position: fixed;
+  animation: moveRoad 10s infinite linear;
+}
+
 .road-top {
   /* So the road will never run out of room */
-  width: 500000px;
   height: 125px;
   background-color: #333333;
   border-bottom: 10px solid white;
-  animation: moveRoad 10s infinite linear;
-  position: fixed;
   bottom: 125px;
   overflow-x: hidden;
   z-index: 1;
@@ -788,12 +792,10 @@ body {
 
 .road-bottom {
   /* So the road will never run out of room */
-  width: 500000px;
+  /* width: 500000px; */
   height: 125px;
   background-color: #333333;
   border-top: 10px solid white;
-  animation: moveRoad 10s infinite linear;
-  position: fixed;
   overflow-x: hidden;
   bottom: 0;
   z-index: 1;
