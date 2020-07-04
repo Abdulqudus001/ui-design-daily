@@ -530,6 +530,16 @@ body {
   background-color: black;
 }
 
+@keyframes moveTorso {
+  from, to {
+    transform: translate(0) rotate(30deg);
+  }
+
+  50% {
+    transform: translate(7px, 2px) rotate(30deg);
+  }
+}
+
 .torso {
   width: 70px;
   height: 130px;
@@ -541,6 +551,11 @@ body {
   transform: rotate(30deg);
   transform-origin: 0% 100%;
   z-index: 1;
+  animation: moveTorso 1s infinite linear;
+}
+
+.butt {
+  animation: moveTorso 1s infinite linear;
 }
 
 .torso::before {
@@ -615,4 +630,43 @@ body {
   top: -95px;
   left: calc(50% - 10px);
   border-radius: 50px;
+}
+
+.neck::before {
+  content: '';
+  width: 30px;
+  height: 60px;
+  display: block;
+  border-radius: 10px;
+  border-left: 7px solid rgba(0, 0, 0, 0.1);
+}
+
+.head {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #a54d2a;
+  position: absolute;
+  top: -150px;
+  left: 10px;
+}
+
+.cap {
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  height: 30px;
+  background-color: green;
+  border-radius: 50px 50px 0 0;
+}
+
+.cap::after {
+  content: '';
+  width: 60px;
+  height: 60px;
+  border-radius: 0 50% 50% 0;
+  background-color: green;
+  position: absolute;
+  right: -58px;
+  transform: rotateX(80deg);
 }
