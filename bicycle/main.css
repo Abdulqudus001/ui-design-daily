@@ -1,3 +1,7 @@
+:root {
+  --vh: 100vh;
+}
+
 html {
   overflow: hidden;
 }
@@ -24,7 +28,7 @@ body {
   align-items: center;
   justify-content: flex-end;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: var(--vh);
   animation: dayLight 40s infinite linear;
 }
 
