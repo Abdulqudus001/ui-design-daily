@@ -808,12 +808,12 @@ body {
 
   40% {
     bottom: calc(100vh - 100px);
-    left: 40%;
+    left: calc(40% - 50px);
   }
 
   50% {
     bottom: calc(100vh - 100px);
-    left: 60%;
+    left: calc(50% - 50px);
   }
 
   to {
@@ -886,6 +886,16 @@ body {
 
 /* Extra small devices */
 @media only screen and (max-width: 375px) {
+  @keyframes moveOffice {
+    from {
+      transform: translateX(100%) scale(0.4);
+    }
+  
+    to {
+      transform: translateX(-100%) scale(0.4);
+    }
+  }
+
   .office {
     transform: scale(0.4);
     bottom: 40px;
@@ -898,6 +908,15 @@ body {
 }
 
 @media only screen and (min-width: 375px) and (max-width: 602px) {
+  @keyframes moveOffice {
+    from {
+      transform: translateX(100%) scale(0.5);
+    }
+  
+    to {
+      transform: translateX(-100%) scale(0.5);
+    }
+  }
   .office {
     transform: scale(0.5);
     bottom: 74px;
@@ -910,6 +929,15 @@ body {
 }
 
 @media only screen and (min-width: 603px) {
+  @keyframes moveOffice {
+    from {
+      transform: translateX(100%) scale(0.7);
+    }
+  
+    to {
+      transform: translateX(-100%) scale(0.7);
+    }
+  }
   .office {
     transform: scale(0.7);
     bottom: 145px;
@@ -922,6 +950,15 @@ body {
 }
 
 @media only screen and (min-width: 1200px) {
+  @keyframes moveOffice {
+    from {
+      transform: translateX(100%) scale(1);
+    }
+  
+    to {
+      transform: translateX(-100%) scale(1);
+    }
+  }
   .office {
     transform: scale(1);
     bottom: 250px;
