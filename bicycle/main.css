@@ -31,7 +31,7 @@ body {
 .bicycle {
   width: 500px;
   min-height: 400px;
-  position: absolute;
+  position: fixed;
   z-index: 10;
 }
 
