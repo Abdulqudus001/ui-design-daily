@@ -153,6 +153,7 @@ h1 {
   color: #fff;
   font-size: 5rem;
   font-weight: 900;
+  text-shadow: 0 4px 7px rgba(0, 0, 0, 0.5);
 }
 
 /* Animation for extra small screens */
@@ -295,6 +296,7 @@ h1 {
     color: #fff;
     font-size: 3rem;
     font-weight: 900;
+    text-shadow: 0 4px 7px rgba(0, 0, 0, 0.5);
   }
 }
 
@@ -437,6 +439,7 @@ h1 {
     color: #fff;
     font-size: 5rem;
     font-weight: 900;
+    text-shadow: 0 4px 7px rgba(0, 0, 0, 0.5);
   }
 }
 
