@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Jost:wght@400;500&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -6,6 +8,7 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('./image.webp');
+  font-family: "Muli", sans-serif;
   background-size: cover;
   overflow: hidden;
   width: 100vw;
@@ -65,11 +68,9 @@ body {
   animation: moveOverlay2 2s linear 1.5, fill 0ms linear 3s forwards;
   display: inline-block;
   width: 70vw;
-  /* width: 100vw; */
   height: 100vh;
   position: absolute;
   left: 30vw;
-  /* left: 0; */
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
 }
@@ -81,15 +82,16 @@ body {
   }
 
   50% {
-    transform: translateX(35vw) translateY(40vh);
-    background-position: 50%;
-    width: 400px;
+    transform: translateX(35vw) translateY(calc(40vh - 10px));
+    background-position: 0 80%;
+    width: 500px;
     height: 20px;
   }
 
   to {
-    transform: translateX(35vw) translateY(50vh) rotate(90deg);
-    width: 400px;
+    transform: translateX(35vw) translateY(calc(50vh - 10px)) rotate(90deg);
+    background-position: 0 80%;
+    width: 500px;
     height: 20px;
     opacity: 1;
   }
@@ -97,16 +99,18 @@ body {
 
 @keyframes open {
   from {
-    transform: translateX(35vw) translateY(50vh) rotate(90deg);
-    width: 400px;
+    transform: translateX(35vw) translateY(calc(50vh - 10px)) rotate(90deg);
+    background-position: 0 80%;
+    width: 500px;
     height: 20px;
     opacity: 1;
   }
 
   to {
-    transform: translateX(0) translateY(30vh) rotate(90deg);
-    width: 400px;
-    height: 300px;
+    transform: translateX(30px) translateY(calc(50vh - 200px)) rotate(90deg);
+    width: 500px;
+    height: 400px;
+    background-position: 0 80%;
     opacity: 1;
   }
 }
@@ -120,4 +124,27 @@ body {
   position: absolute;
   transform: translateX(70vw);
   opacity: 0;
+}
+
+@keyframes moveText {
+  from {
+    transform: translateX(100vw) translateY(-50%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(530px) translateY(-50%);
+    opacity: 1;
+  }
+}
+
+h1 {
+  margin: 0;
+  top: 50%;
+  opacity: 0;
+  animation: moveText 1s linear 5s forwards;
+  position: absolute;
+  color: #fff;
+  font-size: 5rem;
+  font-weight: 900;
 }
