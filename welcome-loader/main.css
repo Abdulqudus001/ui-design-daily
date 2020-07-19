@@ -23,6 +23,17 @@ body {
   height: 100vh;
 }
 
+/* Hide flicker (Hack) */
+nav {
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  height: 10px;
+  top: 0;
+  position: fixed;
+  background-color: red;
+}
+
 @keyframes moveOverlay1 {
   from {
     transform: translateX(-70vw);
@@ -174,22 +185,22 @@ h1 {
   
   @keyframes moveOverlay2 {
     from {
-      transform: translateY(0);
+      transform: translateY(20vh);
     }
   
     50% {
-      transform: translateY(80vh);
+      transform: translateY(100vh);
     }
   
     to {
-      transform: translateY(0);
+      transform: translateY(20vh);
     }
   }
   
   @keyframes fill {
     to {
       height: 100vh;
-      top: 0;
+      transform: translateY(0);
     }
   }
 
@@ -209,9 +220,7 @@ h1 {
     height: 80vh;
     position: absolute;
     left: 0;
-    top: 20vh;
-    background-color: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
+    transform: translateY(20vh);
   }
 
   @keyframes welcome {
