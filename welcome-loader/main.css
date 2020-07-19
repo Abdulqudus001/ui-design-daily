@@ -5,24 +5,119 @@
 body {
   margin: 0;
   padding: 0;
-  background-image: url('./img.webp');
+  background-image: url('./image.webp');
   background-size: cover;
   overflow: hidden;
+  width: 100vw;
 }
 
 .overlay-container {
   display: flex;
 }
 
-.overlay:nth-child(2) {
+@keyframes moveOverlay1 {
+  from {
+    transform: translateX(-70vw);
+  }
+
+  50% {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-70vw);
+  }
+}
+
+@keyframes moveOverlay2 {
+  from {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(70vw);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fill {
+  to {
+    width: 100vw;
+    left: 0;
+  }
+}
+
+.backdrop1 {
+  animation: moveOverlay1 2s linear 1.5;
   display: inline-block;
-  width: 80vw;
+  width: 70vw;
   height: 100vh;
+  position: absolute;
+  transform: translateX(-70vw);
   background-color: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
 }
 
-.overlay:nth-child(1) {
-  width: 20vw;
+.backdrop2 {
+  animation: moveOverlay2 2s linear 1.5, fill 0ms linear 3s forwards;
+  display: inline-block;
+  width: 70vw;
+  /* width: 100vw; */
   height: 100vh;
+  position: absolute;
+  left: 30vw;
+  /* left: 0; */
+  background-color: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
+}
+
+@keyframes welcome {
+  from {
+    transform: translateX(70vw);  
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateX(35vw) translateY(40vh);
+    background-position: 50%;
+    width: 400px;
+    height: 20px;
+  }
+
+  to {
+    transform: translateX(35vw) translateY(50vh) rotate(90deg);
+    width: 400px;
+    height: 20px;
+    opacity: 1;
+  }
+}
+
+@keyframes open {
+  from {
+    transform: translateX(35vw) translateY(50vh) rotate(90deg);
+    width: 400px;
+    height: 20px;
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(0) translateY(30vh) rotate(90deg);
+    width: 400px;
+    height: 300px;
+    opacity: 1;
+  }
+}
+
+.welcome {
+  animation: welcome 2s forwards 3s, open 1s linear 5s forwards;
+  height: 100vh;
+  width: 30vw;
+  background-image: url('./image.webp');
+  background-position: 100% 0;
+  position: absolute;
+  transform: translateX(70vw);
+  opacity: 0;
 }
