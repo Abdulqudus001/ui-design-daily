@@ -8,14 +8,19 @@ body {
   margin: 0;
   padding: 0;
   background-image: url('./image.webp');
+  background-repeat: no-repeat;
   font-family: "Muli", sans-serif;
   background-size: cover;
   overflow: hidden;
   width: 100vw;
+  height: 100vh;
+  position: relative;
 }
 
 .overlay-container {
   display: flex;
+  overflow: hidden;
+  height: 100vh;
 }
 
 @keyframes moveOverlay1 {
@@ -77,19 +82,19 @@ body {
 
 @keyframes welcome {
   from {
-    transform: translateX(70vw);  
+    transform: translateX(70vw) translateY(-100vh);  
     opacity: 1;
   }
 
   50% {
-    transform: translateX(35vw) translateY(calc(40vh - 10px));
+    transform: translateX(35vw) translateY(calc(-40vh - 10px));
     background-position: 0 80%;
     width: 500px;
     height: 20px;
   }
 
   to {
-    transform: translateX(35vw) translateY(calc(50vh - 10px)) rotate(90deg);
+    transform: translateX(35vw) translateY(calc(-50vh - 10px)) rotate(90deg);
     background-position: 0 80%;
     width: 500px;
     height: 20px;
@@ -99,7 +104,7 @@ body {
 
 @keyframes open {
   from {
-    transform: translateX(35vw) translateY(calc(50vh - 10px)) rotate(90deg);
+    transform: translateX(35vw) translateY(calc(-50vh - 10px)) rotate(90deg);
     background-position: 0 80%;
     width: 500px;
     height: 20px;
@@ -107,7 +112,7 @@ body {
   }
 
   to {
-    transform: translateX(30px) translateY(calc(50vh - 200px)) rotate(90deg);
+    transform: translateX(30px) translateY(calc(-50vh - 200px)) rotate(90deg);
     width: 500px;
     height: 400px;
     background-position: 0 80%;
@@ -120,9 +125,10 @@ body {
   height: 100vh;
   width: 30vw;
   background-image: url('./image.webp');
+  background-repeat: no-repeat;
   background-position: 100% 0;
   position: absolute;
-  transform: translateX(70vw);
+  transform: translateX(70vw) translateY(-100vh);
   opacity: 0;
 }
 
@@ -147,4 +153,293 @@ h1 {
   color: #fff;
   font-size: 5rem;
   font-weight: 900;
+}
+
+/* Animation for extra small screens */
+
+@media screen and (max-width: 500px) {  
+  @keyframes moveOverlay1 {
+    from {
+      transform: translateY(-80vh);
+    }
+  
+    50% {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(-80vh);
+    }
+  }
+  
+  @keyframes moveOverlay2 {
+    from {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(80vh);
+    }
+  
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fill {
+    to {
+      height: 100vh;
+      top: 0;
+    }
+  }
+
+  .backdrop1 {
+    animation: moveOverlay1 2s linear 1.5;
+    display: inline-block;
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+    transform: translateY(-80vh);
+  }
+  
+  .backdrop2 {
+    animation: moveOverlay2 2s linear 1.5, fill 0ms linear 3s forwards;
+    display: inline-block;
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+    left: 0;
+    top: 20vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  @keyframes welcome {
+    from {
+      transform: translateY(-20vh);  
+      opacity: 1;
+    }
+  
+    50% {
+      transform: translateX(calc(50vw - 10px))
+        translateY(calc(-50vh - calc(calc(100vw - 100px)) / 2));
+      width: 20px;
+      height: 500px;
+      max-height: calc(100vw - 100px);
+      background-position: 0 0;
+    }
+  
+    to {
+      transform: translateX(calc(50vw - 10px))
+        translateY(calc(-50vh - calc(calc(100vw - 100px)) / 2)) rotate(90deg);
+      background-position: 0 0;
+      height: 500px;
+      max-height: calc(100vw - 100px);
+      width: 20px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes open {
+    from {
+      transform: translateX(calc(50vw - 10px))
+        translateY(calc(-50vh - calc(calc(100vw - 100px)) / 2)) rotate(90deg);
+      background-size: cover;
+      height: 500px;
+      max-height: calc(100vw - 100px);
+      width: 20px;
+      opacity: 1;
+    }
+  
+    to {
+      transform: translateY(calc(-50vh - calc(calc(100vw - 100px)))) translateX(calc(50vw - 150px)) rotate(90deg);
+      height: 500px;
+      margin-top: 30px;
+      background-size: cover;
+      max-height: calc(100vw - 100px);
+      width: 300px;
+      opacity: 1;
+    }
+  }
+
+  .welcome {
+    animation: welcome 2s forwards 3s, open 1s linear 5s forwards;
+    height: 20vh;
+    width: 100vw;
+    background-image: url('./image.webp');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    position: absolute;
+    transform: translateY(-20vh);
+    opacity: 0;
+  }
+
+  @keyframes moveText {
+    from {
+      transform: translateY(100vh) translateX(-50%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(calc(0 + 350px)) translateX(-50%);
+      margin-top: 100px;
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: moveText 1s linear 5s forwards;
+    position: absolute;
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 900;
+  }
+}
+
+/* Animation for small screens */
+@media screen and (min-width: 500px) and (max-width: 900px) {  
+  @keyframes moveOverlay1 {
+    from {
+      transform: translateY(-80vh);
+    }
+  
+    50% {
+      transform: translateY(0);
+    }
+  
+    to {
+      transform: translateY(-80vh);
+    }
+  }
+  
+  @keyframes moveOverlay2 {
+    from {
+      transform: translateY(0);
+    }
+  
+    50% {
+      transform: translateY(80vh);
+    }
+  
+    to {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes fill {
+    to {
+      height: 100vh;
+      top: 0;
+    }
+  }
+
+  .backdrop1 {
+    animation: moveOverlay1 2s linear 1.5;
+    display: inline-block;
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+    transform: translateY(-80vh);
+  }
+  
+  .backdrop2 {
+    animation: moveOverlay2 2s linear 1.5, fill 0ms linear 3s forwards;
+    display: inline-block;
+    width: 100vw;
+    height: 80vh;
+    position: absolute;
+    left: 0;
+    top: 20vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+  }
+
+  @keyframes welcome {
+    from {
+      transform: translateY(-20vh);  
+      opacity: 1;
+    }
+  
+    50% {
+      transform: translateX(calc(50vw - 10px))
+        translateY(calc(-50vh - 250px));
+      width: 20px;
+      height: 500px;
+      max-height: calc(100vw - 100px);
+      background-position: 0 0;
+    }
+  
+    to {
+      transform: translateX(calc(50vw - 10px))
+        translateY(calc(-50vh - 250px)) rotate(90deg);
+      background-position: 0 0;
+      height: 500px;
+      max-height: calc(100vw - 100px);
+      width: 20px;
+      opacity: 1;
+    }
+  }
+
+  @keyframes open {
+    from {
+      transform: translateX(calc(50vw - 10px))
+        translateY(calc(-50vh - 400px)) rotate(90deg);
+      background-size: cover;
+      height: 500px;
+      max-height: calc(100vw - 100px);
+      width: 20px;
+      opacity: 1;
+    }
+  
+    to {
+      transform: translateY(calc(-50vh - 400px)) translateX(calc(50vw - 150px)) rotate(90deg);
+      height: 500px;
+      margin-top: 30px;
+      background-size: cover;
+      max-height: calc(100vw - 100px);
+      width: 300px;
+      opacity: 1;
+    }
+  }
+
+  .welcome {
+    animation: welcome 2s forwards 3s, open 1s linear 5s forwards;
+    height: 20vh;
+    width: 100vw;
+    background-image: url('./image.webp');
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    position: absolute;
+    transform: translateY(-20vh);
+    opacity: 0;
+  }
+
+  @keyframes moveText {
+    from {
+      transform: translateY(100vh) translateX(-50%);
+      opacity: 0;
+    }
+  
+    to {
+      transform: translateY(calc(0 + 300px)) translateX(-50%);
+      margin-top: 30px;
+      opacity: 1;
+    }
+  }
+
+  h1 {
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    animation: moveText 1s linear 5s forwards;
+    position: absolute;
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 900;
+  }
 }
