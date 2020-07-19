@@ -11,7 +11,7 @@ body {
   background-repeat: no-repeat;
   font-family: "Muli", sans-serif;
   background-size: cover;
-  overflow: hidden;
+  overflow-x: hidden;
   width: 100vw;
   height: 100vh;
   position: relative;
@@ -19,7 +19,7 @@ body {
 
 .overlay-container {
   display: flex;
-  overflow: hidden;
+  overflow-x: hidden;
   height: 100vh;
 }
 
@@ -144,11 +144,24 @@ body {
   }
 }
 
+@keyframes scrollText {
+  from {
+    transform: translateX(530px) translateY(-50%);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateX(30px) translateY(50vh);
+    font-size: 3rem;
+    opacity: 1;
+  }
+}
+
 h1 {
   margin: 0;
   top: 50%;
   opacity: 0;
-  animation: moveText 1s linear 5s forwards;
+  animation: moveText 1s linear 5s forwards, scrollText 1s ease-out 7s forwards;
   position: absolute;
   color: #fff;
   font-size: 5rem;
@@ -454,4 +467,10 @@ h1 {
     position: fixed;
     background-color: rgba(255, 255, 255, 0.5);
   }
+}
+
+main {
+  background-image: none;
+  background-color: red;
+  height: 100vh;
 }
