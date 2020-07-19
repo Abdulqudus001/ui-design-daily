@@ -506,17 +506,12 @@ main {
   width: 100%;
 }
 
-@media screen and (max-width: 600px) {
-  .cards {
-    flex-direction: column;
-  }
-}
-
 .card:nth-child(1) {
   width: 66%;
   background-color: rgb(95, 95, 95);
   height: 80vh;
   border-radius: 8px;
+  margin: 10px 0;
 }
 
 .card:nth-child(2) {
@@ -524,6 +519,17 @@ main {
   background-color: rgb(95, 95, 95);
   height: 80vh;
   border-radius: 8px;
+  margin: 10px 0;
+}
+
+@media screen and (max-width: 600px) {
+  .cards {
+    flex-direction: column;
+  }
+
+  .cards div.card {
+    width: 100%;
+  }
 }
 
 h2 {
